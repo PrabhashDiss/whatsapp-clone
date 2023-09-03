@@ -5,11 +5,11 @@ const NavBar = () => {
 		<div className='d-flex bg-ct-grey navbar justify-content-between align-items-center py-3 px-4'>
 			<div className='d-flex align-items-center cursor'>
 				<Image
-					src='https://nythonore.netlify.app/_next/image?url=%2Fnythonore.jpg&w=3840&q=75'
+					src='https://i.ibb.co/yXkcc2x/ABC-Bank.png'
 					alt='Honore Niyitegeka'
 					className='img-fluid fit-cover mr-3 profile'
 				/>
-				<p className='user'>Honore Niyitegeka</p>
+				<p className='user'>ABC Bank</p>
 			</div>
 
 			<div className='d-flex icons'>
