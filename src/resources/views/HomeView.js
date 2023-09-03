@@ -16,9 +16,45 @@ const HomeView = () => {
   const handleAddMessage = () => {
     setData([...data, { value: message, sent: true }]);
     setMessage('');
+    rasaAPI(message);
 
     messagesEndRef.current.scrollIntoView();
   }
+
+  const rasaAPI = async function handleClick(msg) {
+    
+      //chatData.push({sender : "user", sender_id : name, msg : msg});
+
+
+        await fetch('https://7637-2402-4000-1083-c143-e423-5f63-7c68-d338.ngrok-free.app/webhooks/rest/webhook', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'charset':'UTF-8',
+          },
+          credentials: "same-origin",
+          body: JSON.stringify({ "message": msg }),
+      })
+      .then(response => response.json())
+      .then((response) => {
+          if(response){
+              const temp = response[0];
+              const recipient_msg = temp["text"];        
+
+
+              const response_temp = { value: recipient_msg, sent: false };
+
+              setData(data => [...data, response_temp]);
+            // scrollBottom();
+
+          }
+      }) 
+  }
+
+  useEffect(()=>{
+    messagesEndRef.current.scrollIntoView();
+  },[data])
 
   return (
     <AppLayout>
