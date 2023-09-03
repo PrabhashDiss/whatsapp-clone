@@ -5,7 +5,7 @@ const AppLayout = ({ children }) => {
   return (
     <div className="app-layout d-flex">
 
-      <div className="col-12 col-md-8 px-0">
+      <div className="col-12 col-md-12 px-0">
         <NavBar />
 
         <main className="main-content">
