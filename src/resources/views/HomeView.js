@@ -56,6 +56,25 @@ const HomeView = () => {
     messagesEndRef.current.scrollIntoView();
   },[data])
 
+  // Function to get the current time in HH:mm AM/PM format
+  function getCurrentTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+    // Add leading zero to single-digit minutes
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    // Construct the time string
+    const currentTime = hours + ':' + minutes + ' ' + ampm;
+    return currentTime;
+  }
+
   return (
     <AppLayout>
       <div className="message-box px-4 pt-4">
@@ -68,7 +87,7 @@ const HomeView = () => {
                     {data.value}
 
                     <span className="float-right pl-4">
-                      11:49 AM
+                      {getCurrentTime()}
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-all message-check" viewBox="0 0 16 16">
                         <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z" />
@@ -80,7 +99,7 @@ const HomeView = () => {
                     {data.value}
 
                     <span className="float-right pl-4">
-                      11:49 AM
+                      {getCurrentTime()}
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-all message-check" viewBox="0 0 16 16">
                         <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z" />
