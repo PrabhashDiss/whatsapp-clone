@@ -1,50 +1,10 @@
 export const messages = [
   {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: true
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: true
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+    value: 'Welcome to ABC Bank!',
     sent: false
   },
   {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: true
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: true
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+    value: 'We\'re committed to providing you with exceptional financial services and helping you achieve your financial goals.',
     sent: false
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: false
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: false
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: true
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: false
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: true
-  },
-  {
-    value: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    sent: true
   }
 ];
